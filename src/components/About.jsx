@@ -1,27 +1,26 @@
 import React from 'react';
 import './About.css';
-import bakeryIllustration from '../assets/main1.png'; // We'll add this image soon
+import bakeryIllustration from '../assets/main1.png'; 
 
 const About = () => {
   return (
     <section id="about" className="about-section">
       <div className="about-header">
-        <h1>Food Of The Gods, Freshly Baked!</h1>
+        <h1>Where Every Batch Tells a Story</h1>
         <p className="about-intro">
-          Since 2024, we've been serving our guests the best quality treats,
-          traditionally made and presented with care.
+          Welcome to Daisy & Dough! We’re a small Chandigarh bakery with a simple mission: to share a little sweetness, one handcrafted treat at a time.
         </p>
       </div>
 
       <div className="about-content">
         <div className="about-left">
           <div className="about-point">
-            <h3>AUTHENTIC RECIPES</h3>
-            <p>Our products are based on traditional home-style recipes using fresh ingredients.</p>
+            <h3>OUR CHERISHED RECIPES</h3>
+            <p>Our home-style recipes deliver a taste that's both nostalgic and wonderfully new.</p>
           </div>
           <div className="about-point">
-            <h3>BAKED WITH LOVE</h3>
-            <p>Our passion for baking is poured into every recipe, serving smiles on a plate everyday.</p>
+            <h3>A DASH OF PASSION</h3>
+            <p>Baking is our art. We pour our hearts into every item to serve you a piece of happiness.</p>
           </div>
         </div>
 
@@ -31,19 +30,15 @@ const About = () => {
 
         <div className="about-right">
           <div className="about-point">
-            <h3>COMMITTED TO QUALITY</h3>
-            <p>From our ingredients to our kitchen operations & guest services, we always prioritize quality.</p>
+            <h3>UNCOMPROMISING QUALITY</h3>
+            <p>Great taste starts with the finest local ingredients. We never take shortcuts.</p>
           </div>
           <div className="about-point">
-            <h3>HONESTLY PRICED</h3>
-            <p>We constantly strive to offer the best products at the right prices.</p>
+            <h3>SWEETNESS FOR EVERYONE</h3>
+            <p>We offer handcrafted quality at a fair price, because everyone deserves a special treat.</p>
           </div>
         </div>
       </div>
-
-      {/* <div className="about-button-container">
-        <a href="#more-info" className="about-button">KNOW MORE</a>
-      </div> */}
     </section>
   );
 };

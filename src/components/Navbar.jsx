@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom'; // 1. Import useLocation
+import { Link, useLocation } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link'; // 1. Import HashLink
 import { FaSearch, FaBars, FaTimes } from 'react-icons/fa';
 import './Navbar.css';
 import Popup from './Popup';
 
-// 2. Receive setSearchQuery as a prop from Layout
 const Navbar = ({ setSearchQuery }) => { 
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   
-  const location = useLocation(); // 3. Get the current page location
+  const location = useLocation();
   const isHomePage = location.pathname === '/';
   const isMenuPage = location.pathname === '/menu';
 
@@ -25,7 +25,6 @@ const Navbar = ({ setSearchQuery }) => {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
-  // 4. Determine the header's class based on the page and scroll state
   const headerClass = `header ${!isHomePage || scrolled ? 'scrolled' : ''}`;
 
   return (
@@ -42,19 +41,18 @@ const Navbar = ({ setSearchQuery }) => {
             <ul className={`navbar-links ${isOpen ? 'open' : ''}`}>
               <li onClick={closeMenu}><Link to="/">HOME</Link></li>
               <li onClick={closeMenu}><Link to="/menu">MENU</Link></li>
-              {/* <li onClick={closeMenu}><a href="/#about">ABOUT US</a></li> */}
-              <li onClick={closeMenu}><a href="/#contact">CONTACT US</a></li>
+              {/* 2. Replace <a> with HashLink for smooth scrolling */}
+              <li onClick={closeMenu}><HashLink to="/#contact">CONTACT US</HashLink></li>
             </ul>
           </div>
 
           <div className="navbar-right">
-            {/* 5. Only show search bar on the menu page */}
             {isMenuPage && (
               <div className="search-container">
                 <FaSearch className="search-icon" />
                 <input
                   type="text"
-                  placeholder="Search menu..."
+                  placeholder="Search..."
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
               </div>
