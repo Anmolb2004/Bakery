@@ -1,0 +1,134 @@
+.featured-products {
+  padding: 5rem 2rem;
+  background-color: var(--bg-color); /* The original cream background */
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: var(--heading-color);
+}
+
+/* Adds a decorative line under the title */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--accent-color);
+  margin: 1rem auto 3rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.featured-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden; /* Important for the image container's rounded corners */
+  text-align: center;
+}
+
+/* This container holds the image and the overlay */
+.card-image-container {
+  position: relative;
+  overflow: hidden; /* Hides the part of the image that zooms out */
+}
+
+.featured-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* The hover effect to zoom the image */
+.featured-card:hover .featured-image {
+  transform: scale(1.1);
+}
+
+/* The overlay that appears on hover */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.featured-card:hover .card-overlay {
+  opacity: 1;
+}
+
+/* The button inside the overlay */
+.overlay-button {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 0.7rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+}
+
+.featured-card:hover .overlay-button {
+  transform: translateY(0);
+}
+
+.overlay-button:hover {
+    background-color: #fff;
+    color: var(--text-color);
+}
+
+.featured-info {
+  padding: 1.5rem;
+}
+
+.featured-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--heading-color);
+}
+
+.view-all-container {
+    margin-top: 4rem;
+}
+
+.view-all-button {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.view-all-button:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}

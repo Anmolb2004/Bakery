@@ -1,0 +1,31 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap');
+
+/* Define the color palette */
+:root {
+  --bg-color: #fdfaf5;
+  --text-color: #5d4037;
+  --heading-color: #4e342e;
+  --accent-color: #d3b8ae;
+  --accent-hover: #bfa094;
+  --panel-color-2: #a3d2ca;
+  --panel-color-3: #f5a623;
+  --footer-bg-color: #f0f5f5; /* ADD THIS LINE - A clean, soft teal */
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--heading-color);
+}
+

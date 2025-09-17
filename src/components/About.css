@@ -1,0 +1,120 @@
+.about-section {
+  padding: 5rem 2rem;
+  text-align: center;
+  background-color: var(--bg-color); /* Use the light cream background */
+}
+
+.about-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--heading-color);
+}
+
+.about-intro {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem; /* Space between columns */
+  margin-bottom: 3rem;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.about-left,
+.about-right {
+  flex-basis: 30%; /* Take up roughly a third of the space */
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  text-align: left; /* Align text within these columns to the left */
+}
+
+.about-point h3 {
+  font-size: 1.25rem;
+  color: var(--accent-color); /* Use your accent color for titles */
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.about-point p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+.about-center-image {
+  flex-basis: 30%; /* Take up roughly a third for the image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-center-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.about-button-container {
+  margin-top: 3rem;
+}
+
+.about-button {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  border: none;
+  display: inline-block; /* Make it respect padding and margin */
+}
+
+.about-button:hover {
+  background-color: var(--accent-hover);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .about-content {
+    flex-direction: column; /* Stack columns on medium screens */
+    gap: 2rem;
+  }
+  .about-left,
+  .about-right,
+  .about-center-image {
+    flex-basis: 100%; /* Take full width */
+    max-width: 500px; /* Constrain width for readability */
+    margin: 0 auto;
+  }
+  .about-left, .about-right {
+    text-align: center; /* Center text when stacked */
+  }
+}
+
+@media (max-width: 576px) {
+  .about-header h1 {
+    font-size: 2rem;
+  }
+  .about-intro {
+    font-size: 1rem;
+  }
+  .about-point h3 {
+    font-size: 1.1rem;
+  }
+  .about-point p {
+    font-size: 0.9rem;
+  }
+  .about-button {
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+  }
+}

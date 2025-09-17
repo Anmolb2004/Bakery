@@ -1,0 +1,123 @@
+.hero-split {
+  display: flex;
+  min-height: 90vh;
+  align-items: center;
+  background-color: var(--bg-color); /* Light cream background */
+  padding-top: 80px; /* Add padding to prevent navbar overlap */
+}
+
+.hero-text-content {
+  flex: 1;
+  padding: 2rem 4rem;
+  animation: slideInLeft 1s ease-out;
+}
+
+.hero-image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInRight 1s ease-out;
+}
+
+.hero-image-content img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero-title-split {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--heading-color);
+}
+
+.hero-subtitle-split {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  color: var(--text-color);
+  max-width: 500px; /* Constrain line length for readability */
+}
+
+/* Re-using button styles from previous step */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-color);
+  border-color: var(--accent-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 992px) {
+  .hero-split {
+    flex-direction: column-reverse; /* Show image on top on mobile */
+    text-align: center;
+    min-height: auto;
+    padding-top: 100px;
+  }
+
+  .hero-text-content {
+    padding: 2rem;
+  }
+
+  .hero-subtitle-split {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-title-split {
+    font-size: 2.8rem;
+  }
+}

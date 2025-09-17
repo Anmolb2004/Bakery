@@ -1,0 +1,103 @@
+.testimonials {
+  padding: 5rem 2rem;
+  background-color: var(--bg-color); /* Use the warm cream background */
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 3.5rem;
+  color: var(--heading-color);
+}
+
+/* --- Card Styling --- */
+.testimonial-card {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  text-align: left;
+  height: 100%; /* Ensures all cards in view are same height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-card::before {
+  content: '“';
+  font-family: 'Playfair Display', serif;
+  font-size: 8rem;
+  font-weight: 700;
+  color: var(--bg-color);
+  position: absolute;
+  top: -1.5rem;
+  left: 1rem;
+  line-height: 1;
+  z-index: 1;
+}
+
+.testimonial-quote {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-style: italic;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.testimonial-author-info {
+  margin-top: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.rating {
+  color: #ffc107;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.author-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--heading-color);
+}
+
+
+/* --- Scoped Swiper Carousel Customization --- */
+/* Now all styles below only apply to our testimonial-swiper */
+
+.testimonial-swiper {
+  padding-bottom: 4rem !important;
+  max-width: 1100px;
+}
+
+/* Customizing Navigation Arrows */
+.testimonial-swiper .swiper-button-next,
+.testimonial-swiper .swiper-button-prev {
+  color: var(--accent-color) !important;
+  transition: all 0.3s ease;
+}
+.testimonial-swiper .swiper-button-next:hover,
+.testimonial-swiper .swiper-button-prev:hover {
+  transform: scale(1.1);
+}
+
+/* Customizing Pagination Dots */
+.testimonial-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  opacity: 1 !important;
+}
+
+.testimonial-swiper .swiper-pagination-bullet-active {
+  background-color: var(--accent-color) !important;
+}

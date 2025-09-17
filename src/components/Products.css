@@ -1,0 +1,65 @@
+.menu-section {
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.menu-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.menu-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.menu-category {
+    margin-bottom: 3rem;
+}
+
+.menu-category-title {
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.item-name {
+    flex-shrink: 0;
+    padding-right: 1rem;
+}
+
+.item-dots {
+    flex-grow: 1;
+    border-bottom: 1px dotted var(--text-color);
+    position: relative;
+    bottom: 4px;
+}
+
+.item-price {
+    flex-shrink: 0;
+    padding-left: 1rem;
+    font-weight: bold;
+}
+
+.menu-note {
+    text-align: right;
+    font-style: italic;
+    color: #888;
+    margin-top: 1rem;
+}
