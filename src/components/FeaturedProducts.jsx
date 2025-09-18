@@ -2,13 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './FeaturedProducts.css';
 
-// Make sure you have these images in your src/assets folder
-// Existing images
 import cake1 from '../assets/cake1.png';
 import cake2 from '../assets/cake2.png';
 import cake3 from '../assets/cake3.png';
 
-// NEW IMAGES - Imported here
 import tarts from '../assets/tarts.jpg'; 
 import cookies1 from '../assets/cookies1.jpg';
 import cookies2 from '../assets/cookies2.jpg';
