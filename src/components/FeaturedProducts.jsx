@@ -6,9 +6,9 @@ import cake1 from '../assets/cake1.png';
 import cake2 from '../assets/cake2.png';
 import cake3 from '../assets/cake3.png';
 
-import tarts from '../assets/tarts.jpg'; 
-import cookies1 from '../assets/cookies1.jpg';
-import cookies2 from '../assets/cookies2.jpg';
+import tarts from '../assets/tarts.png'; 
+import cookies1 from '../assets/cookies1.png';
+import cookies2 from '../assets/cookies2.png';
 
 const featuredItems = [
   { 
