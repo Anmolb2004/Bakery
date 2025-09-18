@@ -1,6 +1,6 @@
 .featured-products {
-  padding: 5rem 2rem;
-  background-color: var(--bg-color); /* The original cream background */
+  padding: 4rem 2rem;
+  background-color: var(--bg-color);
   text-align: center;
 }
 
@@ -11,14 +11,13 @@
   color: var(--heading-color);
 }
 
-/* Adds a decorative line under the title */
 .section-title::after {
   content: '';
   display: block;
   width: 80px;
   height: 3px;
   background-color: var(--accent-color);
-  margin: 1rem auto 3rem;
+  margin: 1rem auto 2.5rem;
 }
 
 .container {
@@ -29,36 +28,39 @@
 .featured-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2.5rem;
+  gap: 2rem;
+  /* Removed align-items: start; to ensure consistent row height */
 }
 
 .featured-card {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  overflow: hidden; /* Important for the image container's rounded corners */
+  overflow: hidden;
   text-align: center;
 }
 
-/* This container holds the image and the overlay */
 .card-image-container {
   position: relative;
-  overflow: hidden; /* Hides the part of the image that zooms out */
+  overflow: hidden;
+  height: 280px; /* FIXED HEIGHT for the image container */
+  display: flex; /* Use flexbox to center the image */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: #f0f0f0; /* Soft background color to fill empty space */
 }
 
 .featured-image {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
+  max-width: 100%; /* Ensure image doesn't overflow container */
+  max-height: 100%; /* Ensure image doesn't overflow container */
+  object-fit: contain; /* CRUCIAL: Fits the entire image within the container */
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* The hover effect to zoom the image */
 .featured-card:hover .featured-image {
-  transform: scale(1.1);
+  transform: scale(1.05); /* Slightly less aggressive zoom now that object-fit is contain */
 }
 
-/* The overlay that appears on hover */
 .card-overlay {
   position: absolute;
   top: 0;
@@ -77,7 +79,6 @@
   opacity: 1;
 }
 
-/* The button inside the overlay */
 .overlay-button {
   background-color: transparent;
   color: #fff;
@@ -101,18 +102,18 @@
 }
 
 .featured-info {
-  padding: 1.5rem;
+  padding: 1.25rem;
 }
 
 .featured-info h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin: 0;
   color: var(--heading-color);
 }
 
 .view-all-container {
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
 .view-all-button {

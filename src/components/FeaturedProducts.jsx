@@ -3,10 +3,15 @@ import { Link } from 'react-router-dom';
 import './FeaturedProducts.css';
 
 // Make sure you have these images in your src/assets folder
-// I'm assuming you have cake1.png, cake2.png, cake3.png
+// Existing images
 import cake1 from '../assets/cake1.png';
 import cake2 from '../assets/cake2.png';
 import cake3 from '../assets/cake3.png';
+
+// NEW IMAGES - Imported here
+import tarts from '../assets/tarts.jpg'; 
+import cookies1 from '../assets/cookies1.jpg';
+import cookies2 from '../assets/cookies2.jpg';
 
 const featuredItems = [
   { 
@@ -18,8 +23,20 @@ const featuredItems = [
     image: cake2
   },
   { 
-    name: 'Fruit Cake', 
+    name: 'Assorted Fruit Tarts', // New item name
+    image: tarts // New image
+  },
+  { 
+    name: 'Classic Fruit Cake', // Moved this down, adjusted name
     image: cake1
+  },
+  { 
+    name: 'Choco Chip Cookies', // New item name
+    image: cookies1 // New image
+  },
+  { 
+    name: 'Oatmeal Raisin Cookies', // New item name
+    image: cookies2 // New image
   },
 ];
 
@@ -43,9 +60,10 @@ const FeaturedProducts = () => {
             </div>
           ))}
         </div>
-        {/* <div className="view-all-container">
+        {/* Re-enabling the "View Full Menu" button */}
+        <div className="view-all-container">
             <Link to="/menu" className="view-all-button">View Full Menu</Link>
-        </div> */}
+        </div>
       </div>
     </section>
   );
